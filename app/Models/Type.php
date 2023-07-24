@@ -5,20 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Project extends Model
+class Type extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        "title",
-        "publish_date",
-        "description",
-        "accessibility"
+        "type_name",
+        "project_id"
+
     ];
 
-    public function type()
+    public function project()
     {
 
-        return $this->belongsTo(Type::class);
+        return $this->belongsTo(Project::class);
     }
 }
