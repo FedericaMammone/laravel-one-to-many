@@ -11,10 +11,10 @@
         <span>Accessibilità: {{ $projects->accessibility }}</span>
 
         <br>
-        @foreach ($types->project as $project)
-            <span class="bg-warning">
-                Tipo progetto: {{ $project->type_name }}
-            </span>
-        @endforeach
+
+        <span class="bg-warning">
+            Tipo progetto: {{ $projects->type->type_name }}
+        </span>
+
     </div>
 @endsection

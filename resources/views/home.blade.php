@@ -2,7 +2,11 @@
 @section('content')
     <div class="jumbotron p-5 mb-4 bg-light rounded-3">
 
-        <h1 class="text-center">Progetti:</h1>
+        <h1 class="text-center">Progetti:
+            <a class="btn btn-primary" href="{{ route('project.create') }}">
+                +
+            </a>
+        </h1>
         <ul class="text-center list-unstyled">
             @foreach ($projects as $project)
                 @auth
