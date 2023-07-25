@@ -10,14 +10,14 @@ class Type extends Model
     use HasFactory;
 
     protected $fillable = [
-        "type_name",
-        "project_id"
+        "type_name"
+
 
     ];
 
-    public function project()
+    public function projects()
     {
 
-        return $this->belongsTo(Project::class);
+        return $this->hasMany(Project::class);
     }
 }
